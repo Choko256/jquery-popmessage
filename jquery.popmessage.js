@@ -1,3 +1,10 @@
+/***********************************************************************************
+** jQuery Message Popper
+** 		Version: 		1.0.0
+** 		License: 		GPL v3. See LICENSE file.
+**		Author: 		Choko <choko@chaksoft.fr>
+***********************************************************************************/
+
 (function($) {
 	$.fn.pop = function(action, params) {
 		if(!$(this).hasClass("pop")) {
@@ -13,6 +20,7 @@
 		}
 		return this.each(function() {
 			var $self = $(this);
+			// If a side is specified, must override.
 			if(options.side) {
 				$self.removeClass("pop-top-left").removeClass("pop-top-right")
 					.removeClass("pop-bottom-left").removeClass("pop-bottom-right");

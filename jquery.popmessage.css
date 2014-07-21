@@ -1,0 +1,92 @@
+div.pop {
+	border-radius: 5px;
+	min-width: 200px;
+	height: 50px;
+	position: absolute;
+	z-index: 500;
+	display: none;
+	padding: 10px;
+	background-color: #eee;
+	border: 1px solid #bbb;
+	box-shadow: 3px 3px 6px #aaa;
+}
+div.pop div.pop-title {
+	font-weight: bold;
+}
+div.pop div.pop-icon {
+	float: left;
+	margin-right: 20px;
+}
+div.pop div.pop-icon img {
+	max-height: 64px;
+	max-width: 64px;
+}
+
+div.pop-success {
+	background-color: #ccffcc;
+	border: 1px solid #aaddaa;
+	box-shadow: 3px 3px 6px #aaddaa;
+}
+div.pop-success div.pop-title, div.pop-success div.pop-icon {
+	color: #663333;
+}
+
+div.pop-danger {
+	background-color: #ffcccc;
+	border: 1px solid #dd3333;
+	box-shadow: 3px 3px 6px #dd3333;
+}
+div.pop-danger div.pop-title, div.pop-danger div.pop-icon {
+	color: #cc3333;
+}
+
+div.pop-warning {
+	background-color: #ffffcc;
+	border: 1px solid #dddd99;
+	box-shadow: 3px 3px 6px #dddd99;
+}
+div.pop-warning div.pop-title, div.pop-warning div.pop-icon {
+	color: #aaaa33;
+}
+
+div.pop-info {
+	background-color: #ccccff;
+	border: 1px solid #aaaadd;
+	box-shadow: 3px 3px 6px #aaaadd;
+}
+div.pop-info div.pop-title, div.pop-info div.pop-icon {
+	color: #3333cc;
+}
+
+div.pop.pop-top-left {
+	top: 10px;
+	left: 10px;
+}
+div.pop.pop-top-right {
+	top: 10px;
+	right: 10px;
+}
+div.pop.pop-bottom-left {
+	left: 10px;
+	bottom: 10px;
+}
+div.pop.pop-bottom-right {
+	right: 10px;
+	bottom: 10px;
+}
+div.pop.pop-top-wide {
+	left: 10px;
+	width: -moz-calc(100% - 40px);
+	width: -o-calc(100% - 40px);
+	width: -webkit-calc(100% - 40px);
+	width: calc(100% - 40px);
+	top: 10px;
+}
+div.pop.pop-bottom-wide {
+	left: 10px;
+	width: -moz-calc(100% - 40px);
+	width: -o-calc(100% - 40px);
+	width: -webkit-calc(100% - 40px);
+	width: calc(100% - 40px);
+	bottom: 10px;
+}

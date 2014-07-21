@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<style type="text/css">
+			body {
+				font-family: sans-serif;
+				font-size: 10pt;
+			}
+			div.center {
+				margin-left: auto;
+				margin-right: auto;
+				width: 50%;
+				margin-top: 200px;
+			}
+			div.center table {
+				width: 100%;
+				text-align: center;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="./jquery.popmessage.css" />
+		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+		<script type="text/javascript" src="./jquery.popmessage.js">
+		</script>
+	</head>
+	<body>
+		<div class="pop pop-success pop-top-left">
+			<div class="pop-title">
+				Success !
+			</div>
+			<div class="pop-body">
+				This is success message !
+			</div>
+		</div>
+		<div class="pop pop-danger pop-top-right">
+			<div class="pop-title">
+				Danger !
+			</div>
+			<div class="pop-body">
+				This is an error message !
+			</div>
+		</div>
+		<div class="pop pop-warning pop-bottom-left">
+			<div class="pop-title">
+				Warning !
+			</div>
+			<div class="pop-body">
+				This is a warning message !
+			</div>
+		</div>
+		<div class="pop pop-info pop-bottom-right">
+			<div class="pop-icon">
+				<i class="fa fa-info-circle fa-2x"></i>
+			</div>
+			<div class="pop-title">
+				Information
+			</div>
+			<div class="pop-body">
+				Waouh ! It works !
+			</div>
+		</div>
+		<div class="pop pop-success pop-top-wide">
+			<div class="pop-title">
+				Success !
+			</div>
+			<div class="pop-body">
+				This is wide success message !
+			</div>
+		</div>
+		<div class="pop pop-info pop-bottom-wide" id="pop-me">
+			<div class="pop-title">
+				Yihaa !!!!
+			</div>
+			<div class="pop-body">
+				I am <strong>POP ME</strong> !!!
+			</div>
+		</div>
+		<div class="pop pop-top-wide" id="pop-noformat">
+			<div class="pop-title">
+				I am not formatted...
+			</div>
+			<div class="pop-body">
+				... and I like it !
+			</div>
+		</div>
+		<div class="center">
+			<table>
+				<tbody>
+					<tr>
+						<td>
+							<button data-trigger="pop" data-class="pop-top-left">
+								Show Top-Left Corner Pop
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button data-trigger="pop" data-class="pop-top-right">
+								Show Top-Right Corner Pop
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button data-trigger="pop" data-class="pop-bottom-left">
+								Show Bottom-Left Corner Pop
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button data-trigger="pop" data-class="pop-bottom-right">
+								Show Bottom-Right Corner Pop
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button data-trigger="pop" data-class="pop-top-wide">
+								Show Top wide Pop
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button data-trigger="pop" data-class="pop-bottom-wide">
+								Show Bottom wide Pop
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button data-trigger="pop" data-id="pop-me">
+								Show "Pop-Me" pop.
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button data-trigger="pop" data-id="pop-noformat" data-pop-delay="0">
+								Show No-format pop
+							</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

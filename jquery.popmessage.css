@@ -10,6 +10,10 @@ div.pop {
 	border: 1px solid #bbb;
 	box-shadow: 3px 3px 6px #aaa;
 }
+div.pop a {
+	text-decoration: none;
+	border: 0;
+}
 div.pop div.pop-title {
 	font-weight: bold;
 }
@@ -22,12 +26,24 @@ div.pop div.pop-icon img {
 	max-width: 64px;
 }
 
+div.pop div.pop-close-button {
+	float: right;
+	opacity: 0.5;
+	cursor: pointer;
+	font-size: 25px;
+	line-height: 1;
+	font-weight: 500;
+}
+div.pop div.pop-close-button a:hover {
+	font-weight: 800;
+}
+
 div.pop-success {
 	background-color: #ccffcc;
 	border: 1px solid #aaddaa;
 	box-shadow: 3px 3px 6px #aaddaa;
 }
-div.pop-success div.pop-title, div.pop-success div.pop-icon {
+div.pop-success div.pop-title, div.pop-success div.pop-icon, div.pop-success div.pop-close-button a {
 	color: #663333;
 }
 
@@ -36,7 +52,7 @@ div.pop-danger {
 	border: 1px solid #dd3333;
 	box-shadow: 3px 3px 6px #dd3333;
 }
-div.pop-danger div.pop-title, div.pop-danger div.pop-icon {
+div.pop-danger div.pop-title, div.pop-danger div.pop-icon, div.pop-danger div.pop-close-button a {
 	color: #cc3333;
 }
 
@@ -45,7 +61,7 @@ div.pop-warning {
 	border: 1px solid #dddd99;
 	box-shadow: 3px 3px 6px #dddd99;
 }
-div.pop-warning div.pop-title, div.pop-warning div.pop-icon {
+div.pop-warning div.pop-title, div.pop-warning div.pop-icon, div.pop-warning div.pop-close-button a {
 	color: #aaaa33;
 }
 
@@ -54,7 +70,7 @@ div.pop-info {
 	border: 1px solid #aaaadd;
 	box-shadow: 3px 3px 6px #aaaadd;
 }
-div.pop-info div.pop-title, div.pop-info div.pop-icon {
+div.pop-info div.pop-title, div.pop-info div.pop-icon, div.pop-info div.pop-close-button a {
 	color: #3333cc;
 }
 

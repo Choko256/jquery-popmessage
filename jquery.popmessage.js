@@ -12,8 +12,9 @@
 		}
 		var options = {
 			fadeIn: 500,
-			delay: 2000,
-			fadeOut: 500
+			delay: 10000,
+			fadeOut: 500,
+			closable: true
 		};
 		if(params !== undefined) {
 			options = $.extend(options, params);
@@ -29,6 +30,19 @@
 			if(options.css) {
 				$self.css(options.css);
 			}
+			
+			if(options.closable && $self.find('div.pop-close-button').length == 0) {
+				var $closeButton = $('<div class="pop-close-button"><a href="#">&times;</a></div>');
+				$closeButton.off('click').on('click', function(ev) {
+					ev.preventDefault();
+					$self.trigger('pop.hide');
+					$self.clearQueue().fadeOut(options.fadeOut, function() {
+						$self.trigger('pop.hidden');
+					});
+				});
+				$self.prepend($closeButton);
+			}
+			
 			switch(action) {
 				case 'show':
 					$self.trigger('pop.show');

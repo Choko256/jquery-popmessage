@@ -127,6 +127,7 @@ $("#myButton").on('click', function() {
 | **delay** | Time in *milliseconds* of pop message duration. |
 | **side** | Redefine position with `top-left`, `top-right`, `bottom-left`, `bottom-right`, `top-wide`, or `bottom-wide`. |
 | **css** | Additional CSS as a JavaScript object passed to `css` jQuery function. |
+| **closable** | `true` if you want the close button, `false` otherwise |
 
 ## Events
 | Event name        | When it triggered |

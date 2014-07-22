@@ -120,14 +120,14 @@ $("#myButton").on('click', function() {
 ```
 
 
-| Option    |  Effect |
+| Option    | Type | Default | Effect |
 |-------------|-------------------------------------|
-|  **fadeIn** | jQuery *fadeIn* effect speed. |
-| **fadeOut** | jQuery *fadeOut* effect speed. |
-| **delay** | Time in *milliseconds* of pop message duration. |
-| **side** | Redefine position with `top-left`, `top-right`, `bottom-left`, `bottom-right`, `top-wide`, or `bottom-wide`. |
-| **css** | Additional CSS as a JavaScript object passed to `css` jQuery function. |
-| **closable** | `true` if you want the close button, `false` otherwise |
+|  **fadeIn** | integer | 500 | jQuery *fadeIn* effect speed. |
+| **fadeOut** | integer | 500 | jQuery *fadeOut* effect speed. |
+| **delay** | integer | 4000 | Time in *milliseconds* of pop message duration. |
+| **side** | string | *undefined* | Redefine position with `top-left`, `top-right`, `bottom-left`, `bottom-right`, `top-wide`, or `bottom-wide`. |
+| **css** | object | {} | Additional CSS as a JavaScript object passed to `css` jQuery function. |
+| **closable** | boolean | `true` if you want the close button, `false` otherwise |
 
 ## Events
 | Event name        | When it triggered |

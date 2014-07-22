@@ -12,7 +12,7 @@
 		}
 		var options = {
 			fadeIn: 500,
-			delay: 10000,
+			delay: 4000,
 			fadeOut: 500,
 			closable: true
 		};

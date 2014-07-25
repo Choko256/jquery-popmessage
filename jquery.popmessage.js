@@ -36,7 +36,6 @@ String.prototype.startswith = function(needle) {
 		}
 		return this.each(function() {
 			var $self = $(this);
-			var popClass = "";
 			// If a side is specified, must override.
 			if(options.side) {
 				$self.removeClass("pop-top-left").removeClass("pop-top-right")
@@ -46,18 +45,7 @@ String.prototype.startswith = function(needle) {
 			if(options.css) {
 				$self.css(options.css);
 			}
-			
-			var classes = $self.classes();
-			var i = 0;
-			while(popClass == "" && i < classes.length) {
-				if(classes[i].substring(0, 7) === 'pop-top' || classes[i].substring(0, 10) === 'pop-bottom') {
-					popClass = classes[i];
-				}
-				i++;
-			}
-			
-			console.log('Pop class: ' + popClass);
-			
+
 			if(options.container) {
 				$self.css({ 'position': 'relative' });
 				if($self.parents("#" + options.container).length == 0) {

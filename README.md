@@ -98,12 +98,21 @@ Six predefined positions:
 <div class="pop" data-pop-fade-in="300" data-pop-fade-out="900">...</div>
 ```
 
+#### Insert message in another element
+
+You must add the `pop-container` class to the container:
+```html
+<div id="container" class="pop-container">
+	<div class="pop pop-top-wide">...</div>
+</div>
+```
+
 ## Pop the message
 ### Only with HTML
 
 ```html
 <div id="idPop" class="pop pop-top-wide">...</div>
-<button data-trigger="pop" data-id="idPop">Pop !</button>
+<button data-trigger="pop" data-pop-id="idPop">Pop !</button>
 ```
 Customization options are also available on trigger element :
 
@@ -112,22 +121,45 @@ Customization options are also available on trigger element :
 <button data-trigger="pop" data-pop-delay="0" data-pop-fade-in="300" data-id="myPop">Pop !</button>
 ```
 
+You can also pop all messages by a class with the `data-pop-class` attribute :
+
+```html
+<!-- This button will pop all pop messages in the HTML document -->
+<button data-trigger="pop" data-pop-delay="0" data-pop-class="pop">Pop!</button>
+```
+
+You can specify a container if the pop can be displayed in different elements :
+```html
+<button data-trigger="pop" data-pop-id="myPop" data-pop-container="containerid">Pop!</button>
+```
+
+**Note**: *Bottom side popmessages will not correctly work if they are used into containers. You can add your custom CSS into the `css` option.*
+
 ### With jQuery
 ```javascript
+// Options is an **object**
 $("#myButton").on('click', function() {
-    $("#myPop").pop("show", /*options*/);
+    $("#myPop").pop("show", {
+		fadeIn: 500,
+		fadeOut: 500,
+		delay: 4000,
+		side: 'top-wide',
+		css: {},
+		closable: true
+	});
 });
 ```
 
 
 | Option    | Type | Default | Effect |
 |-------------|-------------------------------------|
-|  **fadeIn** | integer | 500 | jQuery *fadeIn* effect speed. |
-| **fadeOut** | integer | 500 | jQuery *fadeOut* effect speed. |
-| **delay** | integer | 4000 | Time in *milliseconds* of pop message duration. |
-| **side** | string | *undefined* | Redefine position with `top-left`, `top-right`, `bottom-left`, `bottom-right`, `top-wide`, or `bottom-wide`. |
-| **css** | object | {} | Additional CSS as a JavaScript object passed to `css` jQuery function. |
-| **closable** | boolean | `true` if you want the close button, `false` otherwise |
+|  **fadeIn** | integer | `500` | jQuery *fadeIn* effect speed. |
+| **fadeOut** | integer | `500` | jQuery *fadeOut* effect speed. |
+| **delay** | integer | `4000` | Time in *milliseconds* of pop message duration. |
+| **side** | string | `undefined` | Redefine position with `top-left`, `top-right`, `bottom-left`, `bottom-right`, `top-wide`, or `bottom-wide`. |
+| **css** | object | `{}` | Additional CSS as a JavaScript object passed to `css` jQuery function. |
+| **closable** | boolean | `true` | `true` if you want the close button, `false` otherwise |
+| **container** | string | `undefined` | Pop message parent ID attribute if you don't want to pop on the whole browser window. |
 
 ## Events
 | Event name        | When it triggered |

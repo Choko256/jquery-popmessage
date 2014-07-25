@@ -26,6 +26,10 @@ div.pop div.pop-icon img {
 	max-width: 64px;
 }
 
+div.pop-container div.pop {
+	position: relative !important;
+}
+
 div.pop div.pop-close-button {
 	float: right;
 	opacity: 0.5;
@@ -77,18 +81,22 @@ div.pop-info div.pop-title, div.pop-info div.pop-icon, div.pop-info div.pop-clos
 div.pop.pop-top-left {
 	top: 10px;
 	left: 10px;
+	max-width: 50%;
 }
 div.pop.pop-top-right {
 	top: 10px;
 	right: 10px;
+	max-width: 50%;
 }
 div.pop.pop-bottom-left {
 	left: 10px;
 	bottom: 10px;
+	max-width: 50%;
 }
 div.pop.pop-bottom-right {
 	right: 10px;
 	bottom: 10px;
+	max-width: 50%;
 }
 div.pop.pop-top-wide {
 	left: 10px;

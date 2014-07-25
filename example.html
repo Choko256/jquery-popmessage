@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Test</title>
+		<title>jQuery PopMessage Example</title>
 		<meta charset="UTF-8" />
 		<meta name="author" content="Choko" />
 		<meta name="license" content="GPLv3" />
@@ -15,11 +15,20 @@
 				margin-left: auto;
 				margin-right: auto;
 				width: 50%;
-				margin-top: 200px;
+				margin-top: 50px;
 			}
 			div.center table {
 				width: 100%;
 				text-align: center;
+			}
+			div#container {
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 150px;
+				border: 1px solid #aaa;
+				height: 150px;
+				position: relative;
 			}
 		</style>
 		<link rel="stylesheet" type="text/css" href="./jquery.popmessage.css" />
@@ -87,62 +96,84 @@
 				... and I like it !
 			</div>
 		</div>
+		<div id="container" class="pop-container">
+			<div class="pop pop-info pop-top-left" id="pop-me-container">
+				<div class="pop-title">
+					Container POP
+				</div>
+				<div class="pop-body">
+					<em>I am a pop message inside a container</em>
+				</div>
+			</div>
+		</div>
 		<div class="center">
 			<table>
 				<tbody>
 					<tr>
 						<td>
-							<button data-trigger="pop" data-class="pop-top-left">
+							<button data-trigger="pop" data-pop-class="pop-top-left">
 								Show Top-Left Corner Pop
 							</button>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<button data-trigger="pop" data-class="pop-top-right">
+							<button data-trigger="pop" data-pop-class="pop-top-right">
 								Show Top-Right Corner Pop
 							</button>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<button data-trigger="pop" data-class="pop-bottom-left">
+							<button data-trigger="pop" data-pop-class="pop-bottom-left">
 								Show Bottom-Left Corner Pop
 							</button>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<button data-trigger="pop" data-class="pop-bottom-right">
+							<button data-trigger="pop" data-pop-class="pop-bottom-right">
 								Show Bottom-Right Corner Pop
 							</button>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<button data-trigger="pop" data-class="pop-top-wide">
+							<button data-trigger="pop" data-pop-class="pop-top-wide">
 								Show Top wide Pop
 							</button>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<button data-trigger="pop" data-class="pop-bottom-wide">
+							<button data-trigger="pop" data-pop-class="pop-bottom-wide">
 								Show Bottom wide Pop
 							</button>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<button data-trigger="pop" data-id="pop-me">
+							<button data-trigger="pop" data-pop-id="pop-me">
 								Show "Pop-Me" pop.
 							</button>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<button data-trigger="pop" data-id="pop-noformat" data-pop-delay="0">
+							<button data-trigger="pop" data-pop-id="pop-noformat" data-pop-delay="0">
 								Show No-format pop
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button data-trigger="pop" data-pop-delay="0" data-pop-id="pop-me-container">
+								Pop in container
+							</button>
+						</td>
+						<td> 
+							<button data-trigger="pop" data-pop-delay="0" data-pop-id="pop-me" data-pop-container="container">
+								Pop me in container
 							</button>
 						</td>
 					</tr>

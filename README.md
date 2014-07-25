@@ -152,13 +152,13 @@ $("#myButton").on('click', function() {
 
 
 | Option    | Type | Default | Effect |
-|-------------|-------------------------------------|
+|-------------|---------|-----------|-----------------|
 |  **fadeIn** | integer | `500` | jQuery *fadeIn* effect speed. |
 | **fadeOut** | integer | `500` | jQuery *fadeOut* effect speed. |
 | **delay** | integer | `4000` | Time in *milliseconds* of pop message duration. |
 | **side** | string | `undefined` | Redefine position with `top-left`, `top-right`, `bottom-left`, `bottom-right`, `top-wide`, or `bottom-wide`. |
 | **css** | object | `{}` | Additional CSS as a JavaScript object passed to `css` jQuery function. |
-| **closable** | boolean | `true` | `true` if you want the close button, `false` otherwise |
+| **closable** | boolean | `true` | `true` if you want the close button, `false` otherwise. |
 | **container** | string | `undefined` | Pop message parent ID attribute if you don't want to pop on the whole browser window. |
 
 ## Events
